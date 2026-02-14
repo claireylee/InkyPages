@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://ckudr8chj1kgo"]
+
+[ext_resource type="Script" uid="uid://cjvqm1qwpcrio" path="res://player.gd" id="1_i3pqv"]
+[ext_resource type="Texture2D" uid="uid://bl7y0evf2nrf3" path="res://frog.png" id="2_hqtel"]
+[ext_resource type="Texture2D" uid="uid://bxyygqf1q614c" path="res://frog-jump.png" id="3_sweqy"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2hs0m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_hqtel")
+}],
+"loop": true,
+"name": &"up",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_sweqy")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[node name="Player" type="Area2D" unique_id=711777918]
+position = Vector2(264, -761)
+script = ExtResource("1_i3pqv")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1565174151]
+position = Vector2(439.46588, 275.1385)
+scale = Vector2(0.577, 0.5)
+sprite_frames = SubResource("SpriteFrames_2hs0m")
+animation = &"walk"
