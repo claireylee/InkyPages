@@ -1,0 +1,16 @@
+Fixing the scene required me to think carefully about what was actually “there” in the game world versus
+what only looked like it was there. Godotbot fell through the floor because the floor was only a visual sprite, 
+not a physics body with a collision shape. Meanwhile, the translucent blue “force field” blocked movement because it had collision enabled when 
+it was likely meant to be decorative or an Area2D. Debugging forced me to separate appearance from function. A sprite may look solid, but in Godot, 
+solidity comes from collision bodies and shapes. In that sense, I was reminded that game worlds are not just images — they are systems of rules layered 
+underneath those images.
+
+Kendall Walton’s idea of props in games of make-believe helped me think about this distinction. A cluster of pixels is not inherently a crate; it 
+becomes a crate because the game’s rules and our shared understanding treat it as one. The sprite, collision shape, and physics body together function 
+  as a prop that prescribes certain imaginings: “this is solid,” “this can be stood on,” “this can be stacked.” Without collision, the crate is only an image; with it, 
+it becomes something the player can believe in and act upon. The world emerges not from how many crates exist, but from how consistently the system supports the fiction those crates suggest.
+
+Playing Unpacking made this even clearer. The developers at Witch Beam tell the story of a life entirely through objects placed in boxes. Each item functions as a prop that 
+invites us to imagine relationships, growth, heartbreak, and change. There is no explicit narration, yet meaning accumulates through repetition, context, and placement. 
+Similarly, in my debugging process, I saw how small technical decisions — enabling or disabling collision, structuring nodes properly — determine whether the imagined world coheres.
+Both coding and Unpacking reveal that a world is built not just from assets, but from rules that sustain belief.
