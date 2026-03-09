@@ -1,0 +1,23 @@
+This week’s work focused on building a 3D scene in Godot and thinking about how space can function as part of storytelling. 
+In the reading, Henry Jenkins discusses the idea of “narrative architecture,” arguing that game environments are not just backgrounds 
+but spaces that structure how stories are experienced. Players move through these environments as both participants and observers, 
+discovering story elements through exploration. Designing a 3D scene in Godot helped me better understand this idea because it required 
+me to think about how the placement of objects, paths, and spaces could guide a player’s experience.
+
+For my scene, I created a small 3D landscape that functions like a still life environment. I used basic shapes such as pillars, rocks, trees, 
+and crates to construct the space. Even though these objects are simple, arranging them made me think about how environments can suggest meaning 
+or invite exploration. For example, placing objects in certain positions can make the player curious about what might be behind them or encourage 
+them to move toward a particular area of the scene.
+
+Adding a controllable character also changed how I thought about the environment. When the player can move through the space, the scene becomes 
+less like a static image and more like a world that unfolds over time. Movement allows the player to explore from different angles and notice details 
+they might not see otherwise. This made me realize that narrative in games often comes from the act of exploring rather than from explicit dialogue or text.
+
+This idea connects closely to the game Gone Home. In Gone Home, the player explores a house and pieces together the story by interacting with objects and 
+reading notes left behind. The narrative is embedded in the environment rather than presented directly. As Jenkins suggests, the architecture of the space 
+itself guides the story experience. Rooms, locked doors, and hidden areas encourage players to explore and slowly uncover the narrative.
+
+Working with Godot helped me better understand how environment design influences storytelling. Even a simple 3D scene can shape how a player moves, 
+what they notice, and what they discover. Designing the space made me think about how objects and layout can imply a story without explicitly telling it. 
+This experience reinforced Jenkins’s argument that game spaces are full of narrative potential and that storytelling in games often emerges from the player’s 
+interaction with the environment.
