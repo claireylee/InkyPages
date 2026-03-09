@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://c0oasiiaekt4s"]
+
+[ext_resource type="Script" uid="uid://cs8b8e16cr3i8" path="res://player.gd" id="1_f3sb7"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_gv5m4"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_f3sb7"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_f3sb7"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_fj7yv"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_tlwt5"]
+size = Vector3(5, 5, 5)
+
+[sub_resource type="PrismMesh" id="PrismMesh_aqk2v"]
+size = Vector3(4, 10, 1)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_036b0"]
+radius = 2.7036133
+height = 5.4072266
+
+[node name="World" type="Node3D" unique_id=1471050002]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01629901, 0, 0.015060663)
+
+[node name="Sun" type="DirectionalLight3D" parent="." unique_id=935253733]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7647386, 3.2418547, -1.8535547)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=351003962]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7281334, 1.6516876, 4.9516754)
+current = true
+
+[node name="Floor" type="MeshInstance3D" parent="." unique_id=1605981685]
+transform = Transform3D(399.9999, 0.16889073, -0.21992403, -0.16852573, 399.99942, 0.66350603, 0.22020385, -0.66341317, 399.9994, -7.638028, -23.856358, -5.3804226)
+mesh = SubResource("PlaneMesh_gv5m4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Floor" unique_id=1242287723]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/StaticBody3D" unique_id=291497923]
+transform = Transform3D(0.99999994, 7.1054274e-12, 0, 7.048584e-12, 0.9999999, 0, 0, 1.1641532e-10, 0.9999999, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_f3sb7")
+
+[node name="Pillar" type="MeshInstance3D" parent="." unique_id=556806873]
+transform = Transform3D(9.999998, 0.0042222682, -0.0054981005, -0.004213143, 9.999986, 0.01658765, 0.005505096, -0.01658533, 9.999985, -0.015173286, 10.948688, -4.37819)
+mesh = SubResource("CylinderMesh_f3sb7")
+
+[node name="Rock" type="MeshInstance3D" parent="." unique_id=906759000]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.192558, 12.392576, -7.8323727)
+mesh = SubResource("SphereMesh_fj7yv")
+
+[node name="Rock2" type="MeshInstance3D" parent="." unique_id=1363269824]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8273685, 11.858399, 19.878017)
+mesh = SubResource("SphereMesh_fj7yv")
+
+[node name="Crate" type="MeshInstance3D" parent="." unique_id=996197580]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.606462, 4.426296, 11.554352)
+mesh = SubResource("BoxMesh_tlwt5")
+
+[node name="Tree" type="MeshInstance3D" parent="." unique_id=10820387]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.807021, 2.371418, 20.206926)
+mesh = SubResource("PrismMesh_aqk2v")
+
+[node name="Player" type="CharacterBody3D" parent="." unique_id=1549373372]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.648, 26.675495, 17.162575)
+script = ExtResource("1_f3sb7")
+
+[node name="Camera3D" type="Camera3D" parent="Player" unique_id=1791632095]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.930687, -2.284504, 2.1412182)
+current = true
+fov = 155.12856
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player" unique_id=1313427496]
+shape = SubResource("CapsuleShape3D_036b0")
